@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Systems Pro Architect | Industrial Automation & OT Architecture Copilot | dubltap.io</title>
-    <meta name="description" content="AI-powered senior OT architect copilot. Design SCADA/HMI, PLC controls, historian systems, edge/IIoT, and OT security. Vendor-specific depth for Ignition, AVEVA, Siemens, Rockwell. Production-grade artifacts.">
-    <meta name="keywords" content="SCADA, PLC, HMI, Ignition, AVEVA, Siemens, Rockwell, OPC-UA, MQTT, Industrial Automation, OT Security, ISA 62443, NIST 800-82">
+    <meta name="description" content="AI-powered senior OT architect copilot. Design SCADA/HMI, PLC controls, historian systems, edge/IIoT, and OT security. Vendor-specific depth for Ignition, AVEVA, Siemens, Rockwell, Schneider Electric, GE, Emerson, Azure IoT, and Microsoft Power Platform. Production-grade artifacts.">
+    <meta name="keywords" content="SCADA, PLC, HMI, Ignition, AVEVA, Siemens, Rockwell, Schneider Electric, EcoStruxure, GE Digital, Emerson DeltaV, Azure IoT, Microsoft Power Platform, Power Automate, Power BI, IoT Edge, OPC-UA, MQTT, Industrial Automation, OT Security, ISA 62443, NIST 800-82">
     <meta property="og:title" content="Systems Pro Architect | dubltap.io">
     <meta property="og:description" content="Senior OT architect copilot — production-grade artifacts for industrial automation.">
     <meta property="og:type" content="website">
@@ -804,7 +804,7 @@
 // ═══════════════════════════════════════════════════════════════════════════════
 // SYSTEMS PRO ARCHITECT — Production Application
 // Industrial Automation & OT Architecture Copilot
-// 8 Capability Domains + 5 Specialist Modes
+// 8 Capability Domains + 9 Specialist Modes (17 total actions)
 // ═══════════════════════════════════════════════════════════════════════════════
 
 const API_URL = 'https://api.dubltap.io';
@@ -851,12 +851,20 @@ const MODES = [
     { id: 'rockwell-expert', name: 'Rockwell/Studio Expert', icon: '⚡', color: '#f59e0b',
       desc: 'Studio 5000, Logix, AOI patterns, FactoryTalk, diagnostics strategy' },
     { id: 'ot-security-advisor', name: 'OT Security Advisor', icon: '🔒', color: '#ef4444',
-      desc: 'ISA/IEC 62443, NIST 800-82, zones/conduits, threat modeling, incident response' }
+      desc: 'ISA/IEC 62443, NIST 800-82, zones/conduits, threat modeling, incident response' },
+    { id: 'schneider-expert', name: 'Schneider Electric Expert', icon: '🔋', color: '#3dcd58',
+      desc: 'EcoStruxure, Citect SCADA, Modicon M580/M340, Control Expert, Triconex safety' },
+    { id: 'azure-iot', name: 'Azure IoT & Cloud', icon: '☁️', color: '#0078d4',
+      desc: 'Azure IoT Hub, IoT Edge, Digital Twins, ADX, AI/ML for industrial environments' },
+    { id: 'power-platform', name: 'Power Platform for OT', icon: '⚡', color: '#742774',
+      desc: 'Power Automate workflows, Power BI industrial dashboards, Power Apps for plant floor' },
+    { id: 'ge-emerson-expert', name: 'GE/Emerson Expert', icon: '🏭', color: '#00b140',
+      desc: 'iFIX, Proficy, DeltaV, Ovation, AMS Device Manager, Plantweb ecosystem' }
 ];
 
 const PRICING = [
     { name: 'Free Trial', price: '$0', period: '', sessions: '3 sessions total',
-      features: ['All 8 capability domains', 'All 5 specialist modes', 'Basic artifact generation'],
+      features: ['All 8 capability domains', 'All 9 specialist modes', 'Basic artifact generation'],
       btn: 'Current Plan', style: 'outline', priceId: null },
     { name: 'Professional', price: '$49.99', period: '/mo', sessions: '100 sessions/month', popular: true,
       features: ['Full artifact generation', 'Production-grade scripts', 'Vendor-specific templates', 'Priority support', 'Export to engineering tools'],
@@ -1079,11 +1087,11 @@ function renderLanding() {
             <div class="hero-badge">🏭 ENTERPRISE OT ARCHITECTURE</div>
             <h1>Your Senior Industrial Automation Architect — On Demand</h1>
             <p>Production-grade SCADA/HMI designs, PLC control patterns, historian architectures,
-               edge/IIoT integrations, and OT security plans. Vendor-specific depth for Ignition,
-               AVEVA, Siemens, and Rockwell.</p>
+               edge/IIoT integrations, cloud connectivity, and OT security plans. Platform-agnostic depth across
+               Ignition, AVEVA, Siemens, Rockwell, Schneider Electric, GE, Emerson, Azure IoT, Edge, and Microsoft Power Platform.</p>
             <div class="hero-stats">
                 <div class="hero-stat"><div class="hero-stat-value">8</div><div class="hero-stat-label">Capability Domains</div></div>
-                <div class="hero-stat"><div class="hero-stat-value">5</div><div class="hero-stat-label">Specialist Modes</div></div>
+                <div class="hero-stat"><div class="hero-stat-value">9</div><div class="hero-stat-label">Specialist Modes</div></div>
                 <div class="hero-stat"><div class="hero-stat-value">ISA 62443</div><div class="hero-stat-label">Compliant</div></div>
                 <div class="hero-stat"><div class="hero-stat-value">$200+/hr</div><div class="hero-stat-label">Consultant Replaced</div></div>
             </div>
@@ -1239,6 +1247,9 @@ function renderCrossSell() {
         </div>
         <div class="cross-sell-brand">
             <a href="https://dubltap.io">dubltap.io</a> — AI that actually does stuff. 🎸
+        </div>
+        <div style="text-align:center;font-size:10px;color:var(--text-dim);margin-top:8px;opacity:0.6;">
+            All product names, logos, and brands are property of their respective owners. Not affiliated with or endorsed by any vendor.
         </div>
     </div>`;
 }
